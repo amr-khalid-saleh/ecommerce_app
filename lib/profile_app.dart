@@ -21,7 +21,7 @@ class ProfileApp extends StatelessWidget {
         theme: ThemeData(
             scaffoldBackgroundColor: Colors.white
         ),
-        home: BottomNavBar(),
+        home: LoginView(),
       ),
     );
   }

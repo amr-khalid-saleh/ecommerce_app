@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:profile_project/bottom_nav_bar.dart';
 
 import '../../../../sign_up/presentation/views/widgets/sign_up_options_item.dart';
 
@@ -11,20 +12,28 @@ class LoginButtonsOptions extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Container(
-          width: double.infinity,
-          height: 48.h,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.r),
-            color: Color(0xff4E0189),
-          ),
-          child: Text(
-            'Login',
-            style: TextStyle(
-              fontSize: 17.sp,
-              fontWeight: FontWeight.w600,
-              color: Colors.white,
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BottomNavBar()),
+            );
+          },
+          child: Container(
+            width: double.infinity,
+            height: 48.h,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.r),
+              color: Color(0xff4E0189),
+            ),
+            child: Text(
+              'Login',
+              style: TextStyle(
+                fontSize: 17.sp,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
             ),
           ),
         ),
