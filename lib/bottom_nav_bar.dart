@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profile_project/ecommerce_app/add_product/presentation/views/add_product_view.dart';
 import 'package:profile_project/ecommerce_app/favorite/presentaion/view/favorite_view.dart';
 import 'package:profile_project/ecommerce_app/home/presentation/view/home_view.dart';
 import 'package:profile_project/ecommerce_app/profile/presentation/views/profile_view.dart';
@@ -30,6 +31,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_currentIndex],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => AddProductView()),
+          );
+        },
+        backgroundColor: Color(0xff6055D8),
+        child: Icon(Icons.add_rounded, color: Colors.white),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color(0xffF8F7F7),
         currentIndex: _currentIndex,
