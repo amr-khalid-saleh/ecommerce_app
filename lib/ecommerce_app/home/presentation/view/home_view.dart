@@ -132,6 +132,7 @@ class _HomeViewState extends State<HomeView> {
                     return CategoryWidget(
                       imageUrl: categories[index]['image'],
                       title: categories[index]['name'],
+                      categoryId: categories[index]['id'],
                     );
                   },
                 ),
