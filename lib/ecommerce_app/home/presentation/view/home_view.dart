@@ -41,11 +41,9 @@ class _HomeViewState extends State<HomeView> {
     final Dio dio = Dio();
     final response = await dio.get('https://api.escuelajs.co/api/v1/products');
     final List<dynamic> data = response.data;
-    log(data.toString());
     setState(() {
       generalProducts = data;
     });
-    log(generalProducts.toString());
   }
 
   @override
@@ -151,7 +149,7 @@ class _HomeViewState extends State<HomeView> {
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
                 scrollDirection: Axis.vertical,
-                itemCount: 10,
+                itemCount: generalProducts.length,
                 itemBuilder: (context, index) {
                   return SizedBox(
                     width: 126,

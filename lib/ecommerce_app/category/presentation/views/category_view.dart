@@ -42,49 +42,48 @@ class _CategoryViewState extends State<CategoryView> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0.w),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        width: 48.w,
-                        height: 48.h,
-                        decoration: BoxDecoration(
-                          color: Color(0xffd3d0d0),
-                          shape: BoxShape.circle,
-                        ),
-                        child: Icon(
-                          Icons.arrow_back_rounded,
-                          size: 24,
-                          color: Colors.black,
-                        ),
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.0.w),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      width: 48.w,
+                      height: 48.h,
+                      decoration: BoxDecoration(
+                        color: Color(0xffd3d0d0),
+                        shape: BoxShape.circle,
                       ),
-                    ),
-                    Spacer(flex: 5),
-                    Text(
-                      widget.categoryName,
-                      style: TextStyle(
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.w600,
+                      child: Icon(
+                        Icons.arrow_back_rounded,
+                        size: 24,
                         color: Colors.black,
                       ),
                     ),
-                    Spacer(flex: 7),
-                  ],
-                ),
-                SizedBox(height: 24.h),
-                ListView.builder(
-                  shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  ),
+                  Spacer(flex: 5),
+                  Text(
+                    widget.categoryName,
+                    style: TextStyle(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black,
+                    ),
+                  ),
+                  Spacer(flex: 7),
+                ],
+              ),
+              SizedBox(height: 24.h),
+              Expanded(
+                child: ListView.builder(
                   scrollDirection: Axis.vertical,
-                  itemCount: 10,
+                  itemCount: products.length,
                   itemBuilder: (context, index) {
                     return SizedBox(
                       width: 126,
@@ -98,8 +97,8 @@ class _CategoryViewState extends State<CategoryView> {
                     );
                   },
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
