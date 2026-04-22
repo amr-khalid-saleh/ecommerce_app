@@ -2,7 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DetailsView extends StatelessWidget {
-  const DetailsView({super.key});
+  final String imageUrl;
+  final String title;
+  final String description;
+  final int price;
+
+  const DetailsView({
+    super.key,
+    required this.imageUrl,
+    required this.title,
+    required this.description,
+    required this.price,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,27 +26,38 @@ class DetailsView extends StatelessWidget {
                 borderRadius: BorderRadius.vertical(
                   bottom: Radius.circular(12.r),
                 ),
-                child: Image.asset(
-                  'assets/images/offer_picture.png',
+                child: Image.network(
+                  imageUrl,
                   width: double.infinity,
                   height: 408.h,
                   fit: BoxFit.cover,
+                  errorBuilder: (contetxt, error, stackTrace){
+                    return SizedBox(
+                      width: double.infinity,
+                      height: 480.h,
+                    );
+                  },
                 ),
               ),
               Positioned(
                 top: 52.h,
                 left: 16.w,
-                child: Container(
-                  width: 48.w,
-                  height: 48.h,
-                  decoration: BoxDecoration(
-                    color: Color(0xffd3d0d0),
-                    shape: BoxShape.circle,
-                  ),
-                  child: Icon(
-                    Icons.arrow_back_rounded,
-                    size: 24,
-                    color: Colors.black,
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    width: 48.w,
+                    height: 48.h,
+                    decoration: BoxDecoration(
+                      color: Color(0xffd3d0d0),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      Icons.arrow_back_rounded,
+                      size: 24,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
@@ -70,7 +92,7 @@ class DetailsView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'duck',
+                          title,
                           style: TextStyle(
                             fontSize: 20.sp,
                             fontWeight: FontWeight.w600,
@@ -109,7 +131,7 @@ class DetailsView extends StatelessWidget {
                     ),
                     Spacer(),
                     Text(
-                      '\$ 4',
+                      '\$ $price',
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w600,
@@ -129,7 +151,7 @@ class DetailsView extends StatelessWidget {
                 ),
                 SizedBox(height: 8.h),
                 Text(
-                  '................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................',
+                  description,
                   style: TextStyle(
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w600,

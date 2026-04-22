@@ -91,6 +91,7 @@ class _CategoryViewState extends State<CategoryView> {
                       child: CustomProductWidget(
                         imageUrl: products[index]['images'][0] ?? '',
                         title: products[index]['title'] ?? '',
+                        description: products[index]['description'],
                         category: products[index]['category']['name'] ?? '',
                         price: products[index]['price'] ?? 0,
                       ),

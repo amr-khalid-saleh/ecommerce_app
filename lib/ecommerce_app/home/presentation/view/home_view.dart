@@ -158,6 +158,7 @@ class _HomeViewState extends State<HomeView> {
                     child: CustomProductWidget(
                       imageUrl: generalProducts[index]['images'][0] ?? '',
                       title: generalProducts[index]['title'] ?? '',
+                      description: generalProducts[index]['description'],
                       category:
                           generalProducts[index]['category']['name'] ?? '',
                       price: generalProducts[index]['price'] ?? 0,
