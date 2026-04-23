@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:profile_project/ecommerce_app/auth/sign_up/presentation/views/widgets/text_field_section.dart';
+import 'package:profile_project/features/auth/sign_up/presentation/views/widgets/text_field_section.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});

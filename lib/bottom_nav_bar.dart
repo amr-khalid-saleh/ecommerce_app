@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:profile_project/ecommerce_app/add_product/presentation/views/add_product_view.dart';
-import 'package:profile_project/ecommerce_app/favorite/presentaion/view/favorite_view.dart';
-import 'package:profile_project/ecommerce_app/home/presentation/view/home_view.dart';
-import 'package:profile_project/ecommerce_app/profile/presentation/views/profile_view.dart';
+import 'package:profile_project/features/add_product/presentation/views/add_product_view.dart';
+import 'package:profile_project/features/favorite/presentaion/view/favorite_view.dart';
+import 'package:profile_project/features/home/presentation/view/home_view.dart';
+import 'package:profile_project/features/profile/presentation/views/profile_view.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});

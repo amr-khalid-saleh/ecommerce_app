@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:profile_project/ecommerce_app/home/presentation/view/widgets/category_widget.dart';
-import 'package:profile_project/ecommerce_app/home/presentation/view/widgets/custom_app_bar.dart';
-import 'package:profile_project/ecommerce_app/home/presentation/view/widgets/custom_product_widget.dart';
-import 'package:profile_project/ecommerce_app/home/presentation/view/widgets/custom_text_field.dart';
+import 'package:profile_project/features/home/presentation/view/widgets/category_widget.dart';
+import 'package:profile_project/features/home/presentation/view/widgets/custom_app_bar.dart';
+import 'package:profile_project/features/home/presentation/view/widgets/custom_product_widget.dart';
+import 'package:profile_project/features/home/presentation/view/widgets/custom_text_field.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

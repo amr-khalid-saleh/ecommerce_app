@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:profile_project/ecommerce_app/home/presentation/view/widgets/custom_card_widget.dart';
+import 'package:profile_project/features/home/presentation/view/widgets/custom_card_widget.dart';
 
 class FavoriteView extends StatelessWidget {
   final List<Map<String, dynamic>> products = const [

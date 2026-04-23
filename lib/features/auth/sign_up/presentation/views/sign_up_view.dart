@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:profile_project/ecommerce_app/auth/sign_up/presentation/views/widgets/sign_up_buttons_options.dart';
-import 'package:profile_project/ecommerce_app/auth/sign_up/presentation/views/widgets/sign_up_form.dart';
+import 'package:profile_project/features/auth/sign_up/presentation/views/widgets/sign_up_buttons_options.dart';
+import 'package:profile_project/features/auth/sign_up/presentation/views/widgets/sign_up_form.dart';
 
 import '../../../login/presentation/views/login_view.dart';
 

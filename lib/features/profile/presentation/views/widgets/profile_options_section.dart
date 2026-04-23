@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:profile_project/ecommerce_app/profile/presentation/views/widgets/profile_option_item.dart';
+import 'package:profile_project/features/profile/presentation/views/widgets/profile_option_item.dart';
 
 class ProfileOptionsSection extends StatelessWidget {
   const ProfileOptionsSection({super.key});

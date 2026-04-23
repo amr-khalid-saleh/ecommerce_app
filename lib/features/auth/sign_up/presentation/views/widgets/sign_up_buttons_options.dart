@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:profile_project/ecommerce_app/auth/sign_up/presentation/views/widgets/sign_up_options_item.dart';
+import 'package:profile_project/features/auth/sign_up/presentation/views/widgets/sign_up_options_item.dart';
 
 class SignUpButtonsOptions extends StatelessWidget {
   const SignUpButtonsOptions({super.key});
